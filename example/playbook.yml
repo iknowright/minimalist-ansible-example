@@ -1,0 +1,13 @@
+---
+- name: Touch a file
+  hosts: localhost
+  connection: local
+
+  vars:
+    project_dir: /data/example
+
+  tasks:
+    - name: Touch a file called touch.txt
+      ansible.builtin.file:
+        path: "{{ project_dir }}/touch.txt"
+        state: touch

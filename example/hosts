@@ -1,0 +1,9 @@
+example:
+  hosts:
+    staging:
+      # test managed node in localhost
+      ansible_host: staging.example.com # IP address
+      ansible_user: vm_user_name
+      ansible_ssh_private_key_file: private.pem # ssh secret key
+      # optional (needed if you use some advanced collection module)
+      ansible_python_interpreter: /usr/bin/python
